@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Namaste React</title>
+</head>
+<body>
+    <h1> Diwanshu is King</h1>
+    <div id="root">
+        <h1>Diwanshu is Developer</h1>
+         <!-- //this line will be replaced by the render elements. -->
+    </div>
+    <h1> Vikram is Mentor </h1> 
+    <!-- yo root bhanda mathi ko elements haru chai replace hudainan 
+    cause hamro root div matra ho jo line 20 ma define cha -->
+<script crossorigin src="https://unpkg.com/react@18/umd/react.development.js"></script>
+<script crossorigin src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+ <!-- yo cdn ko package ko script jailai mathi huna parcha ani normal js ko script tala nabhaye react inject 
+ hudaina  -->
+<script>
+    const heading = React.createElement("h1",{},"Hello World from React")
+
+    const root = ReactDOM.createRoot(document.getElementById("root"));
+
+    const parent = React.createElement( "div" ,{ id : "parent"},[
+    React.createElement("div" ,{ id : "child"},[React.createElement("h1",{},"I am an h1 tag"
+    ) , React.createElement("h2",{},"I am an h2 tag"
+    )]),
+    React.createElement("div" ,{ id : "child"},[React.createElement("h1",{},"I am an h1 tag"
+    ) , React.createElement("h2",{},"I am an h2 tag"
+    )])
+]) 
+    
+    
+    ;
+    root.render(parent);
+</script>
+</body>
+</html>
